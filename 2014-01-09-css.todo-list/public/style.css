@@ -1,0 +1,38 @@
+*{
+   font-family: monospace;
+}
+
+h1{
+  color: red;
+}
+
+div{
+  color: green;
+}
+
+a[href]{
+  border: 10px dotted teal;
+}
+a[href="http://en.wikipedia.org/"]{
+  background-color: yellow;
+}
+
+#one{
+  color: blue;
+}
+
+#two{
+  background-color: green;
+}
+.number{
+  font-size: 8px;
+}
+#three{
+  border: 2px dashed blue;
+  border-radius: 5px;
+  padding: 5px;
+}
+.x1{
+  background-color:purple;
+}
+div#

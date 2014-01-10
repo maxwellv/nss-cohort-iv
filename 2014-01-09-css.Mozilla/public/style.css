@@ -1,0 +1,48 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+div#main{
+  border: 1px solid red;
+  width: 960px;
+  margin: 0px auto;
+}
+
+body{
+  background: url(/images/bg-sand.png) repeat;
+  font-family: 'Open Sans', sans-serif;
+}
+header{
+  font-family: 'Open Sans', sans-serif;
+}
+h1, h2{
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.1;
+  margin: 0 auto 40px;
+  position: relative;
+  text-align: center;
+  color: #c13832;
+  font-size: 84px;
+  font-weight: bold;
+  letter-spacing: -0.05em;
+}
+h2 {
+  font-size: 55px;
+  color: #000;
+  font-weight:300;
+}
+#menu a{
+  text-decoration: none;
+  color:#333;
+  margin: auto 10px;
+}
+#menu a:hover{
+  text-decoration: underline;
+}
+#menu li{
+  display: inline-block;
+  list-style-type: none;
+}
+ul#accordion li{
+  display: inline-block;
+}
+#accordion img{
+  background-size: 340px 340px, auto auto
+}
