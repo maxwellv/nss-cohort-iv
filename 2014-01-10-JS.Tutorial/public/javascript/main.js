@@ -31,3 +31,23 @@ andromeda_distance = 2540000;
 m_per_ly = 9.4607 * 10E15;
 */
 
+/*
+var first_name = prompt("Enter your first name:");
+console.log("Your first name is: " + first_name);
+var last_name = prompt("Enter your last name:");
+console.log("Your full name is: " + first_name + " " + last_name);
+*/
+
+/*
+var l = prompt("Enter the length of your room:");
+l = parseInt(l);
+var w = parseInt(prompt("Enter the width of your room:"));
+var h = parseInt(prompt("Enter the height of your room:"));
+alert("Your room's area is: " + l * w * h);
+*/
+
+var age = parseInt(prompt("Enter your age:"));
+if(age < 18)
+  alert("You cannot vote.");
+else
+  alert("You can vote.");
