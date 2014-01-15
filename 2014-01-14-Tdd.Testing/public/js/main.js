@@ -28,9 +28,9 @@ function makeEvenStringsUppercase(x){
   var ret = [];
   for (var count = 0;count < x.length;count++){
     if (x[count].length % 2 === 0)
-      ret.push(x[count].toUpperCase())
+      ret.push(x[count].toUpperCase());
     else
-      ret.push(x[count].toLowerCase())
+      ret.push(x[count].toLowerCase());
   }
   return ret;
 }
@@ -39,7 +39,7 @@ function sumLengthOfStrings(x){
   var ret = 0;
   for (var count = 0;count < x.length;count++){
     if (x[count] != " ")
-      ret++
+      ret++;
   } return ret;
 }
 
