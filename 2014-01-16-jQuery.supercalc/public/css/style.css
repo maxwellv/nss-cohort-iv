@@ -1,0 +1,13 @@
+#answer {
+  border: solid 1px red;
+  text-align: right;
+}
+#queue {
+  border: solid 1px green;
+}
+td {
+  border:solid 1px black;
+}
+.button {
+  margin: 10px;
+}

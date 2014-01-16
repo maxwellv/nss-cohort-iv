@@ -1,0 +1,16 @@
+@import url(http://fonts.googleapis.com/css?family=Freckle+Face);
+p {
+  font-size: 30px;
+}
+
+.cp {
+  font-family: "Freckle Face",  cursive;
+}
+
+.alert {
+  background-color: red;
+}
+
+.success {
+  background-color: green;
+}
