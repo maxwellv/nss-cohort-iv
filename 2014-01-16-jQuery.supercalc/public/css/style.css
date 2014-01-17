@@ -1,9 +1,13 @@
+body {
+  font-family: monospace;
+}
+
 #answer {
-  border: solid 1px red;
+  border: solid 3px red;
   text-align: right;
 }
 #queue {
-  border: solid 1px green;
+  border: solid 3px green;
 }
 td {
   border:solid 1px black;
