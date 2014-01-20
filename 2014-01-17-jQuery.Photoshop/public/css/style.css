@@ -1,0 +1,25 @@
+.color{
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 2px;
+}
+.selected{
+  border: 2px dashed black;
+}
+.clear{
+  clear: both;
+}
+#colors{
+  border: 3px solid silver;
+  background-color: dimgray;
+}
+#pixels{
+  border: 1px solid gray;
+}
+.pixel{
+  width: 10px;
+  height: 10px;
+  float: left;
+  margin: 1px;
+}

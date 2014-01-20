@@ -9,12 +9,16 @@ function initialize(){
   $(".operator").click(compute);
 }
 
+
 function compute(){
   //var operator = $(this).attr("id"); -- works for any attribute
   var operator = this.id;
+  //Is it grayed out?
+  if ($("#" + operator).css("color") === "rgb(204, 204, 204)")
+    return;
   var $nums = $("#queue li");
   var result = null;
-  nums = parseTags($nums);
+  var nums = parseTags($nums);
   switch(operator){
     case "add":
       result = nums[0] + nums[1];
@@ -42,10 +46,22 @@ function compute(){
       clearQueue();
       break;
     case "sum":
-      //some stuff
+      result = 0;
+      for (var x = 0;x < nums.length;x++)
+        result = result + nums[x];
+      $("#answer").text(result);
+      clearQueue();
       break;
     default:
       //if we get here then something wrong happened
+  }
+}
+
+function changeOperatorColor(color, BGColor){
+  var operators = ["add", "sub", "mul", "div", "pow"];
+  for (var x in operators){
+    $("#" + operators[x]).css("color", color);
+    $("#" + operators[x]).css("background-color", BGColor);
   }
 }
 
@@ -53,7 +69,7 @@ function displayNumber(){
   if (this.textContent === "." && containsChar($("#answer").text(), "."))
     return;
   if ($("#answer").text() && $("#answer").text() !== "0")
-    $("#answer").text($("#answer").text() + this.textContent)
+    $("#answer").text($("#answer").text() + this.textContent);
   else
     if (this.textContent === ".")
       $("#answer").text($("#answer").text() + this.textContent);
@@ -65,6 +81,7 @@ function clearAnswer(){
 }
 function clearQueue(){
   $("#queue").empty(); //.empty() clears lists
+  changeOperatorColor("#000000", "#ffffff");
 }
 function clearBoth(){
   clearAnswer();
@@ -82,6 +99,8 @@ function push(){
   // append: at the bottom
 
   $("#queue").prepend($li);
+  if ($("#queue li").length > 2)
+    changeOperatorColor("#CCCCCC", "#999999"); 
 
 
   /*

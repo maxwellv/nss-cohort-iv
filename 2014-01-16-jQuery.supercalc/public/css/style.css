@@ -4,6 +4,7 @@ body {
 
 #answer {
   border: solid 3px red;
+  font-size:24px;
   text-align: right;
 }
 #queue {
@@ -15,3 +16,8 @@ td {
 .button {
   margin: 10px;
 }
+.number, .operator, #push, #clear, #toggleNeg {
+  padding: 20px;
+  font-size: 18px;
+}
+
