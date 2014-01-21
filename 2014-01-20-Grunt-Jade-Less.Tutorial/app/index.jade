@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Jade Tutorial
+    link(rel='stylesheet', href='/css/style.css')
+    script(src='/js/vendor/jquery-1.10.2.js')
+    script(src='/js/source/main.js')
+  body
+    header
+      h1 Welcome to Jade
+      img(src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Rock_Fort_Temple.jpg/100px-Rock_Fort_Temple.jpg')
+    #section1
+      ul
+        li a
+        li b
+        li c
+        //- a - invokes JavaScript
+        - var firstName = "Max";
+        h2= firstName
+        //- formatting is very important!!! use "h2= blah" literally
+        -for(var i = 0; i < 100; i++)
+          h3= i
+          h2 world
+        //- indentation defines loops
+        
+    #section2
+      h2 Section 1
+      p This is paragraph 2
+      p 
+        | This is paragraph 2
+        | addendum to paragraph 1
+        span Span 1
+      footer.foot1.foot2#footerid
+
