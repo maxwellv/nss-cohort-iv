@@ -1,0 +1,10 @@
+body {
+  background-color: #ffffff;
+}
+#photos div {
+  width: 100px;
+  height: 100px;
+  margin: 3px;
+  background-size: cover;
+  float: left;
+}

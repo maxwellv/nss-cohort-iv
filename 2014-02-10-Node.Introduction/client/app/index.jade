@@ -1,0 +1,65 @@
+doctype html
+//[if IE 9]><html class="lt-ie10" lang="en" > <![endif]
+html(class='no-js', lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Foundation 5
+    link(rel='stylesheet', href='/css/normalize.css')
+    link(rel='stylesheet', href='/css/foundation.css')
+    link(rel='stylesheet', href='/css/app.css')
+    script(src='/js/vendor/modernizr.js')
+  body
+    .row
+      .small-12.columns
+        h1 Foundation 5 Template
+    .row
+      .small-2.columns
+        button#one One
+      .small-10.columns
+        #one-response
+    .row
+      .small-2.columns
+        button#two Two
+      .small-10.columns
+        #two-response
+    .row
+      .small-2.columns
+        button#add Add
+      .small-1.columns
+        input#firstnum
+      .small-1.columns
+        input#secondnum
+      .small-8.columns
+        #add-response
+    .row
+      .small-1.columns
+        Name
+        input#name
+      .small-1.columns
+        Age
+        input#age
+      .small-2.columns
+        button#canDrink Can drink?
+      .small-8.columns
+        #drink-response
+    .row
+      .small-3.columns
+        Numbers
+        input#numbers
+      .small-3.columns
+        button#product Product
+      .small-6.columns
+        #product-response
+    .row
+      .small-3.columns
+        input#namelist
+      .small-3.columns
+        button#names Enter Names
+      .small-6.columns
+        #names-response
+    script(src='/js/vendor/jquery.js')
+    script(src='/js/vendor/foundation.js')
+    script(src='/js/vendor/lodash.js')
+    script(src='/js/source/main.js')
+
