@@ -52,16 +52,12 @@
       var $tr = $('<tr>');
       var $name = $('<td>');
       $name.text(data[x].name);
-      $name.addClass('name');
       var $time = $('<tr>');
       $time.text(data[x].time);
-      $time.addClass('time');
       var $calories = $('<td>');
       $calories.text(data[x].calories);
-      $calories.addClass('calories');
       var $date = $('<td>');
       $date.text(data[x].date);
-      $date.addClass('date');
       $tr.append($name, $time, $calories, $date);
       $('#exercises tbody').append($tr);
     }

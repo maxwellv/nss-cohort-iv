@@ -1,0 +1,18 @@
+body {
+  background-color: #993399;
+}
+.poster {
+  max-height: 300px;
+}
+tbody th:nth-child(2n) {
+  background-color: #ffe5e5;
+}
+tbody th:nth-child(2n-1) {
+  background-color: #e5ffff;
+}
+.edit,
+.delete {
+  color: blue;
+  font-size: 75%;
+  text-decoration: underline;
+}
