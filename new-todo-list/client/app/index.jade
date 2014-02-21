@@ -1,0 +1,59 @@
+doctype html
+//[if IE 9]><html class="lt-ie10" lang="en" > <![endif]
+html(class='no-js', lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Foundation 5
+    link(rel='stylesheet', href='/css/normalize.css')
+    link(rel='stylesheet', href='/css/foundation.css')
+    link(rel='stylesheet', href='/css/app.css')
+    script(src='/js/vendor/modernizr.js')
+  body
+    .row
+      .small-12.columns
+        h1 Foundation 5 Template
+    .row
+      .small-3.columns
+        form#createTodo
+          fieldset
+            label Todo Name
+            input(type='text', name='name')#todoname
+            label Due Date
+            input(type='text', name='dueDate')#dueDate
+            label Tags
+            input(type='text', name='tags')#tags
+            button#create-todo Create Todo
+      .small-9.columns
+        table#todos
+          thead
+            tr
+              th
+              th Name
+              th Due Date
+              th Priority
+              th Tags
+          tbody
+    .row
+      .small-3.columns
+        form#createPriority
+          fieldset
+            label Priority Name
+            input(type='text', name='name')#name
+            label Priority Value
+            input(type='text', name='value')#value
+            button#create-priority Create Priority
+      .small-9.columns
+        table#priorities
+          thead
+            tr
+              th Priority
+              th Value
+              th Functions
+            tbody
+
+    script(src='/js/vendor/jquery.js')
+    script(src='/js/vendor/foundation.js')
+    script(src='/js/vendor/lodash.js')
+    script(src='/js/source/main.js')
+
