@@ -5,7 +5,7 @@ var priorities = global.nss.db.collection('priorities');
 var Mongo = require('mongodb');
 
 function Priority(priority){
-  this._id = priority._id;
+  this._id = priority._id ? Mongo.ObjectID(priority._id.toString()) : priority._id;
   this.name = priority.name;
   this.value = parseInt(priority.value);
 

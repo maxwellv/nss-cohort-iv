@@ -51,7 +51,11 @@ exports.destroy = function(req, res){
   init();
 
   Priority.deleteById(req.params.id, function(count){
-    res.send({count:count});
+    if (count > 0){
+      res.send({count:count, id:req.params.id});
+    } else {
+      res.send({count:count});
+    }
   });
 };
 

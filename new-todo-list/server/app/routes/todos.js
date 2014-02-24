@@ -34,6 +34,20 @@ exports.destroy = function(req, res){
   });
 };
 
+exports.query = function(req, res){
+  init();
+  Todo.query(req.params, function(todos){
+    res.send({todos:todos});
+  });
+};
+
+exports.toggleComplete = function(req, res){
+  init();
+  Todo.toggleComplete(req.params.id, req.params.complete, function(result){
+    res.send(result);
+  });
+};
+
 function init(){
   Todo = global.nss.Todo;
 }

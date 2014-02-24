@@ -25,13 +25,17 @@ app.get('/priorities', d, priorities.index);
 app.get('/priorities/:id', d, priorities.show);
 app.put('/priorities/:id', d, priorities.update);
 app.post('/priorities', d, priorities.create);
-app.del('/priorities/:id', d, priorities.destroy);
+app.delete('/priorities/:id', d, priorities.destroy);
+app.del('/priorities/:id', d, priorities.destroy); //lame hack to make the tests pass; I don't know why I write the verb as "del" initially
 
 app.get('/todos', d, todos.index);
+app.get('/todos/:query/:skip/:limit', d, todos.query);
 app.post('/todos', d, todos.create);
 app.get('/todos/:id', d, todos.show);
+app.get('/todos/:id/:complete', todos.toggleComplete);
 //maybe add a way for users to edit todos, not sure on this one
-app.del('/todos/:id', d, todos.destroy);
+app.delete('/todos/:id', d, todos.destroy);
+app.del('/todos/:id', d, todos.destroy); //lame hack, see above
 /* --- pipeline ends   */
 
 var server = require('http').createServer(app);

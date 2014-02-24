@@ -1,3 +1,18 @@
 body {
-  background-color: #993399;
+  background-color: #ffffff;
+}
+.delete {
+  color: red;
+  font-size: 75%;
+  text-decoration: underline;
+}
+.save {
+  color: green;
+  padding: 5px;
+  text-decoration: underline;
+}
+.pastdue {
+  color: red;
+  font-size: 125%;
+  background-color: #fff2e5;
 }

@@ -7,9 +7,9 @@ var Mongo = require('mongodb');
 function Todo(todo){
   this._id = todo._id;
   this.name = todo.name;
-  this.dueDate = todo.dueDate; //expecting a JavaScript date object
+  this.dueDate = new Date(todo.dueDate);
   this.isComplete = (todo.isComplete ? true : false); //null or undefined will make this false, of course
-  this.tags = todo.tags;
+  this.tags = (typeof todo.tags === 'object') ? todo.tags : todo.tags.split(', ');
   this.priority = Mongo.ObjectID(todo.priority.toString());
 }
 
@@ -79,5 +79,25 @@ Todo.deleteById = function(id, fn){
   var _id = Mongo.ObjectID(id);
   todos.remove({_id:_id}, function(err, deletedCount){
     fn(deletedCount);
+  });
+};
+
+Todo.query = function(queryArgs, fn){
+  if (queryArgs.query === 'null'){
+    queryArgs.query = null;
+  }
+  todos.find(queryArgs.query).skip(parseInt(queryArgs.skip)).limit(parseInt(queryArgs.limit)).toArray(function(err, records){
+    fn(records);
+  });
+};
+
+Todo.toggleComplete = function(id, complete, fn){
+  var _id = Mongo.ObjectID(id);
+  todos.findOne({_id:_id}, function(err, found){
+    found.isComplete = complete;
+    console.log(found);
+    todos.update({_id:_id}, found, function(records){
+      fn(records);
+    });
   });
 };
